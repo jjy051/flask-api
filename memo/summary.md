@@ -99,5 +99,23 @@
         - by doing, can clarify a parent package and can solve relative package import errors
 
 
+### 9. File Upload Function
+- to update file upload function through API,
+    - S3, IAM setting needed
+    - boto3 package needed
+    - database table revised (profile_address column added)
+- to upload and download file through API,
+    - upload
+        - POST API Request with multipart form: 
+        - http -v --form localhost:5000/profile-picture profile_pic@~/Images/test.jgp "Authorization: ..."
+    - get picture address
+        - GET API Request:
+        - http -v GET localhost:5000/profile-picture/1
+            - it returns file but just binary data (not shown in terminal)
+        - wget localhost:5000/profile-picture/1 -O profile.png
+            - it downloads file in ~/.profile.png
+            - then, can see the image clicking that file
+
+
 
 
