@@ -115,6 +115,8 @@
         - wget localhost:5000/profile-picture/1 -O profile.png
             - it downloads file in ~/.profile.png
             - then, can see the image clicking that file
+- unit test advanced concept
+    - mock, patch
 
 
 
