@@ -1,0 +1,17 @@
+brew install mysql
+
+# after installation of mysql, try start mysql server. 
+# and it comes errors.
+
+brew services start mysql
+ -> it failed since mysql.sock was not created.
+ -> tried serveral things including reinstallation, but it did not solve
+
+# then, try another command to start mysql server
+
+mysql.server start
+ -> at first, it failed since it needed permission to read profile
+ -> sudo mysql.server start command finally did work!
+
+mysql_secure_installation
+ -> setting initial secure config such as root user password and so on.
